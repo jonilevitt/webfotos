@@ -1,4 +1,4 @@
-# Estudio Joni Levit
+# Estudio Joni Levitt
 
 Home de prueba, estática y adaptable a celular. HTML y CSS, sin instalación ni compilación.
 
