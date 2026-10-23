@@ -55,3 +55,31 @@
   .header nav{width:100%;justify-content:space-between;gap:10px}
   .hero-carousel{max-height:none;aspect-ratio:4/5}
 }
+
+.photo-pair img.cushion-photo{filter:none;aspect-ratio:2/3;object-fit:contain}
+
+/* Align the two portfolio photographs without cropping them. */
+.photo-pair{align-items:start}
+.photo-pair .photo-offset{margin-top:0}
+.photo-pair img.cushion-photo,.photo-pair img.product-photo{aspect-ratio:2/3;object-fit:contain;object-position:center}
+
+.photo-pair img.cushion-photo,.photo-pair img.product-photo{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;object-position:center}
+
+/* A quiet, single-column portfolio on desktop as well as mobile. */
+@media(min-width:601px){
+  .header,main,footer{width:min(900px,88%)}
+  .photo-pair{grid-template-columns:minmax(0,1fr);gap:54px;max-width:620px;margin:54px auto 0}
+  .photo-pair img.cushion-photo,.photo-pair img.product-photo{aspect-ratio:auto;object-fit:contain;height:auto}
+  .photo-pair .photo-offset{margin-top:0}
+  .about{grid-template-columns:1fr;max-width:620px;margin:70px auto 0;padding:42px 0 60px}
+  .about .eyebrow{margin-bottom:28px}
+}
+
+@media(min-width:601px){
+  .photo-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;max-width:none}
+  .photo-pair img.cushion-photo,.photo-pair img.product-photo{aspect-ratio:2/3;object-fit:cover;height:auto}
+}
+
+.about{display:block;max-width:none}.studio-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}.studio-photo{width:100%;height:auto;filter:none}.about .studio-copy p{font-size:14px;line-height:1.85;color:var(--muted);max-width:none;margin-bottom:20px}.about .studio-location{font-size:11px;border-top:1px solid var(--line);padding-top:20px;margin-top:26px}.studio-copy h2{font-size:clamp(30px,3.4vw,45px)}@media(max-width:600px){.studio-layout{grid-template-columns:1fr;gap:30px}.studio-copy h2{font-size:36px}.studio-photo{max-width:100%}}
+
+.studio-contact{display:flex;flex-direction:column;align-items:flex-start;gap:8px;font-size:14px;line-height:1.6}.studio-contact a{padding-block:7px;overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--line)}
